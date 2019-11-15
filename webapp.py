@@ -16,7 +16,7 @@ def render_p1():
   return render_template('page1.html', shootingOverTimeData = get_shootingsOverTimeDate(shooting_data))
   
 def get_shootingsOverTimeDate(dataSet):
-  toReturn = [{x:1, y:1},{x:2, y:2}]
+  toReturn = [{'x':1, 'y':1},{'x':2, 'y':2}]
   return toReturn
     
   
