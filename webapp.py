@@ -9,7 +9,11 @@ def render_main():
     counties = json.load(shooting_data)
   return render_template('home.html')
 
-
-
+@app.route("/p1")
+def render_p1():
+  with open('police_shootings (1).json') as shooting_data:
+    counties = json.load(shooting_data)
+  return render_template('page1.html')
+  
 if __name__=="__main__":
     app.run(debug=False)
