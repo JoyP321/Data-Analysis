@@ -17,8 +17,8 @@ def render_p1():
 
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
-  for Incident in data:
-    if data[category][specificCategory] == target:
+  for incident in data:
+    if incident[category][specificCategory] == target:
       toReturn +=1
   return toReturn
 
