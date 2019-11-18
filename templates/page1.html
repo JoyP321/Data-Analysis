@@ -31,10 +31,7 @@
       });
       chart1.render();
     }
-  </script>
 
-
-  <script type="text/javascript">
     window.onload = function () {
       var chart2 = new CanvasJS.Chart("chartContainer", {
         title:{
@@ -43,9 +40,9 @@
         data: [              
         {
           // Change type to "doughnut", "line", "splineArea", etc.
-          type: "doughnut",
+          type: "column",
           dataPoints: [
-            { label: "White, non-Hispanic",  y: 2  },
+            { label: "White, non-Hispanic",  y: {{ numWhite}}  },
             { label: "Black, non-Hispanic", y: {{ numBlack }}  },
             { label: "Asian", y: {{ numAsian }}  },
             { label: "Native American",  y: {{ numNA }}  },
@@ -61,6 +58,6 @@
   </script>
 
 
-  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <div id="chartContainer" style="height: 300px; width: 50%;"></div>
   
 {% endblock %}
