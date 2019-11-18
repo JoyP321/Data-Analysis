@@ -13,11 +13,7 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     counties = json.load(shooting_data)
-  return render_template('page1.html', shootingOverTimeData = get_shootingsOverTimeDate(shooting_data))
-  
-def get_shootingsOverTimeDate(dataSet):
-  toReturn = [{'x':1, 'y':1},{'x':2, 'y':2}]
-  return toReturn
+  return render_template('page1.html'))
     
   
 if __name__=="__main__":
