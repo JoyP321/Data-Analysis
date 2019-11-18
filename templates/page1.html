@@ -18,13 +18,13 @@
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
         dataPoints: [
-          { label: "White, non-Hispanic",  y: {{ numWhite}}  },
-          { label: "Black, non-Hispanic", y: 2  },
-          { label: "Asian", y: 2  },
-          { label: "Native American",  y: 2  },
-          { label: "Hispanic",  y: 2  },
-          { label: "Other",  y: 2  },
-          { label: "Unknown",  y: 2  }
+          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
+          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+          { label: "Asian", y: {{ numAsian }}  },
+          { label: "Native American",  y: {{ numNA }}  },
+          { label: "Hispanic",  y: {{ numHispanic }}  },
+          { label: "Other",  y: {{ numOther }}  },
+          { label: "Unknown",  y: {{ numUnknown }}  }
         ]
       }
       ]
