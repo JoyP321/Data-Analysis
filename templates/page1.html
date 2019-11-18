@@ -29,32 +29,10 @@
         }
         ]
       }
-        
-      var chart2 = new CanvasJS.Chart("chartContainer", {
-        title:{
-          text: "Shootings by Race"              
-        },
-        data: [              
-        {
-          // Change type to "doughnut", "line", "splineArea", etc.
-          type: "column",
-          dataPoints: [
-            { label: "White, non-Hispanic",  y: {{ numWhite}}  },
-            { label: "Black, non-Hispanic", y: {{ numBlack }}  },
-            { label: "Asian", y: {{ numAsian }}  },
-            { label: "Native American",  y: {{ numNA }}  },
-            { label: "Hispanic",  y: {{ numHispanic }}  },
-            { label: "Other",  y: {{ numOther }}  },
-            { label: "Unknown",  y: {{ numUnknown }}  }
-         ]
-        }
-        ]
-      }
     });
-      
-    chart2.render();
-      
-    }
+ 
+    chart1.render();  
+  }
   </script>
 
 
