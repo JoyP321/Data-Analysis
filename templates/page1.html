@@ -8,53 +8,56 @@
   <h1>Victims of Shootings</h1>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script type="text/javascript">
-  window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer1", {
-      title:{
-        text: "Shootings by Race"              
-      },
-      data: [              
-      {
-        // Change type to "doughnut", "line", "splineArea", etc.
-        type: "doughnut",
-        dataPoints: [
-          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
-          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
-          { label: "Asian", y: {{ numAsian }}  },
-          { label: "Native American",  y: {{ numNA }}  },
-          { label: "Hispanic",  y: {{ numHispanic }}  },
-          { label: "Other",  y: {{ numOther }}  },
-          { label: "Unknown",  y: {{ numUnknown }}  }
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        title:{
+          text: "Shootings by Race"              
+        },
+        data: [              
+        {
+          // Change type to "doughnut", "line", "splineArea", etc.
+          type: "doughnut",
+          dataPoints: [
+            { label: "White, non-Hispanic",  y: {{ numWhite }}  },
+            { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+            { label: "Asian", y: {{ numAsian }}  },
+            { label: "Native American",  y: {{ numNA }}  },
+            { label: "Hispanic",  y: {{ numHispanic }}  },
+            { label: "Other",  y: {{ numOther }}  },
+            { label: "Unknown",  y: {{ numUnknown }}  }
+          ]
+        }
         ]
-      }
-      ]
-    });
-    chart.render();
-  }
-    
-  window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer2", {
-      title:{
-        text: "Shootings by Race"              
-      },
-      data: [              
-      {
-        // Change type to "doughnut", "line", "splineArea", etc.
-        type: "doughnut",
-        dataPoints: [
-          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
-          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
-          { label: "Asian", y: {{ numAsian }}  },
-          { label: "Native American",  y: {{ numNA }}  },
-          { label: "Hispanic",  y: {{ numHispanic }}  },
-          { label: "Other",  y: {{ numOther }}  },
-          { label: "Unknown",  y: {{ numUnknown }}  }
+      });
+      chart.render();
+    }
+  </script>
+
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        title:{
+          text: "Shootings by Race"              
+        },
+        data: [              
+        {
+          // Change type to "doughnut", "line", "splineArea", etc.
+          type: "doughnut",
+          dataPoints: [
+            { label: "White, non-Hispanic",  y: 2  },
+            { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+            { label: "Asian", y: {{ numAsian }}  },
+            { label: "Native American",  y: {{ numNA }}  },
+            { label: "Hispanic",  y: {{ numHispanic }}  },
+            { label: "Other",  y: {{ numOther }}  },
+            { label: "Unknown",  y: {{ numUnknown }}  }
+          ]
+        }
         ]
-      }
-      ]
-    });
-    chart.render();
-  }
+      });
+      chart.render();
+    }
   </script>
 
 
