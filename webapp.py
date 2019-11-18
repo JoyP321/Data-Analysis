@@ -13,7 +13,7 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     counties = json.load(shooting_data)
-  return render_template('page1.html', numWhite = 20)
+  return render_template('page1.html', numWhite = 20, numBlack = 20, numAsian = 20, numNA = 20, numHispanic = 20, numOther = 20, numUnknown =20)
     
   
 if __name__=="__main__":
