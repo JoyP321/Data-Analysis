@@ -30,7 +30,29 @@
       }
       ]
     });
+    
+    var chart2 = new CanvasJS.Chart("chartContainer", {
+      title:{
+        text: "My First Chart in CanvasJS"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
+          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+          { label: "Asian", y: {{ numAsian }}  },
+          { label: "Native American",  y: {{ numNA }}  },
+          { label: "Hispanic",  y: {{ numHispanic }}  },
+          { label: "Other",  y: {{ numOther }}  },
+          { label: "Unknown",  y: {{ numUnknown }}  }
+        ]
+      }
+      ]
+    });
     chart.render();
+    chart2.render();
   }
   </script>
   <div id="chartContainer" style="height: 300px; width: 50%;"></div>
