@@ -63,10 +63,29 @@
       }
       ]
     });
-   
+    
+    var chart4 = new CanvasJS.Chart("chartContainer4", {
+      title:{
+        text: "Victims by Arms Status"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "Had Gu",  y: {{ numGun }}  },
+          { label: "Had ", y: {{ numKnife }}  },
+          { label: "Female", y: {{ numUnarmed }}  },
+          { label: "Unknown", y: {{ numArmsUnknown }}  }
+        ]
+      }
+      ]
+    });
+
     chart1.render()
     chart2.render()
     chart3.render()
+    chart4.render()
    
 
   }
@@ -74,6 +93,7 @@
   <div id="chartContainer1" style="width: 45%; height: 300px; display: inline-block;"></div>
   <div id="chartContainer2" style="width: 45%; height: 300px; display: inline-block;"></div>
   <div id="chartContainer3" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer4" style="width: 45%; height: 300px; display: inline-block;"></div>
   
   
 {% endblock %}
