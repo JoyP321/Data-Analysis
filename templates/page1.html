@@ -33,20 +33,15 @@
 
     var chart2 = new CanvasJS.Chart("chartContainer2", {
       title:{
-        text: "Victims with Mental Illness"              
+        text: "Victims with Percieved Mental Illness"              
       },
       data: [              
       {
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
         dataPoints: [
-          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
-          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
-          { label: "Asian", y: {{ numAsian }}  },
-          { label: "Native American",  y: {{ numNA }}  },
-          { label: "Hispanic",  y: {{ numHispanic }}  },
-          { label: "Other",  y: {{ numOther }}  },
-          { label: "Unknown",  y: {{ numUnknown }}  }
+          { label: "White, non-Hispanic",  y: {{ numMentalIllness }}  },
+          { label: "Black, non-Hispanic", y: {{ numWithoutMentalIllness }}  }
         ]
       }
       ]
