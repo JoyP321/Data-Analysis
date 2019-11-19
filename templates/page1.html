@@ -46,16 +46,34 @@
       }
       ]
     });
-    
-    
-    
+
+    var chart3 = new CanvasJS.Chart("chartContainer3", {
+      title:{
+        text: "Victims by Gender"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "Male",  y: 5  },
+          { label: "Female", y: 5  },
+          { label: "Unknown", y: 5  }
+        ]
+      }
+      ]
+    });
+   
     chart1.render()
     chart2.render()
+    chart3.render()
+   
 
   }
   </script>
   <div id="chartContainer1" style="width: 45%; height: 300px; display: inline-block;"></div>
   <div id="chartContainer2" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer3" style="width: 45%; height: 300px; display: inline-block;"></div>
   
   
 {% endblock %}
