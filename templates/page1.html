@@ -47,22 +47,7 @@
       ]
     });
     
-    var chart3 = new CanvasJS.Chart("chartContainer3", {
-      title:{
-        text: "Victims by Gender"              
-      },
-      data: [              
-      {
-        // Change type to "doughnut", "line", "splineArea", etc.
-        type: "doughnut",
-        dataPoints: [
-          { label: "Male",  y: {{ numMale }}  },
-          { label: "Female", y: {{ numFemale }}  },
-          { label: "Unknown", y: {{ numGenderUnknown }}  }
-        ]
-      }
-      ]
-    });
+    
     
     chart1.render()
     chart2.render()
