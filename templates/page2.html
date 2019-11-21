@@ -6,7 +6,29 @@
 
 {% block content %}
   <h1>Victims of Shootings</h1>
-  
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart1 = new CanvasJS.Chart("chartContainer1", {
+      title:{
+        text: "Victims by Race"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
+          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+          { label: "Asian", y: {{ numAsian }}  },
+          { label: "Native American",  y: {{ numNA }}  },
+          { label: "Hispanic",  y: {{ numHispanic }}  },
+          { label: "Other",  y: {{ numOther }}  },
+          { label: "Unknown",  y: {{ numUnknown }}  }
+        ]
+      }
+      ]
+    });
   
   
 {% endblock %}
