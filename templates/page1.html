@@ -56,7 +56,7 @@
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
         dataPoints: [
-          { label: "Male " + str({{ numMale }}),  y: {{ numMale }}  },
+          { label: str("Male " + str({{ numMale }})),  y: {{ numMale }}  },
           { label: "Female", y: {{ numFemale }}  },
           { label: "Unknown", y: {{ numGenderUnknown }}  }
         ]
