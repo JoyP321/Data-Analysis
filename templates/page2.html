@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% set active_page = "page1"%}
+
+{% block title %}page1{% endblock %}
+
+{% block content %}
+  <h1>Victims of Shootings</h1>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript">
+
+  window.onload = function () {
+    var chart1 = new CanvasJS.Chart("chartContainer1", {
+      title:{
+        text: "Victims by Race"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
+          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
+          { label: "Asian", y: {{ numAsian }}  },
+          { label: "Native American",  y: {{ numNA }}  },
+          { label: "Hispanic",  y: {{ numHispanic }}  },
+          { label: "Other",  y: {{ numOther }}  },
+          { label: "Unknown",  y: {{ numUnknown }}  }
+        ]
+      }
+      ]
+    });
+
+    var chart2 = new CanvasJS.Chart("chartContainer2", {
+      title:{
+        text: "Victims by Percieved Mental Illness"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "With Mental Illness",  y: {{ numMentalIllness }}  },
+          { label: "Without Mental Illness", y: {{ numWithoutMentalIllness }}  }
+        ]
+      }
+      ]
+    });
+
+    var chart3 = new CanvasJS.Chart("chartContainer3", {
+      title:{
+        text: "Victims by Gender"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "Male",  y: {{ numMale }}  },
+          { label: "Female", y: {{ numFemale }}  },
+          { label: "Unknown", y: {{ numGenderUnknown }}  }
+        ]
+      }
+      ]
+    });
+    
+    var chart4 = new CanvasJS.Chart("chartContainer4", {
+      title:{
+        text: "Victims by Arms Status"              
+      },
+      data: [              
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "doughnut",
+        dataPoints: [
+          { label: "Had Gun",  y: {{ numGun }}  },
+          { label: "Had Knife", y: {{ numKnife }}  },
+          { label: "Other", y: {{ numArmedOther }}  },
+          { label: "Toy Weapon", y: {{ numToyWeapon }}  },
+          { label: "Undetermined", y: {{ numUndetermined }}  },
+          { label: "sword", y: {{ numSword}}  },
+          { label: "Machete", y: {{ numMachete }}  },
+          { label: "Box Cutter", y: {{ numBoxCutter }}  },
+          { label: "Taser", y: {{ numTaser }}  },
+          { label: "Unknown Weapon", y: {{ numUnknownWeapon }}  },
+          { label: "Gun and Knife", y: {{ numGunAndKnife }}  },
+          { label: "Ax", y: {{ numAx }}  },
+          { label: "Baseball Bat", y: {{ numBat }}  },
+          { label: "Vehicle", y: {{ numVehicle}}  },
+          { label: "Unknown", y: {{ numArmsUnknown }}  }
+        ]
+      }
+      ]
+    });
+
+    chart1.render()
+    chart2.render()
+    chart3.render()
+    chart4.render()
+   
+
+  }
+  </script>
+  <div id="chartContainer1" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer2" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer3" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer4" style="width: 45%; height: 300px; display: inline-block;"></div>
+  
+  
+{% endblock %}
