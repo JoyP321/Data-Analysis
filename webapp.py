@@ -40,7 +40,11 @@ def get_state_data(data):
     else:
       states[incident["Incident"]["Location"]["State"]]+=1
   print(states)
-
+  code =""
+  for state in states:
+    code += "\n { y: " + states[state] +", label: \""+ state[state] +"\", indexLabel: \"" + state + "\"" },"
+  print(code)
+        
 def get_arms(data):
   list = {}
   for incident in data:
