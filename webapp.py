@@ -26,7 +26,7 @@ def count_individuals(category, specificCategory, target, data):
       toReturn +=1
   return toReturn
 
-def get_Arms(data):
+def get_arms(data):
   list = {}
   for incident in data:
     if incident["Factors"]["Armed"] not in list:
