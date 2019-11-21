@@ -30,7 +30,7 @@ def get_Arms(data):
   list = {}
   for incident in data:
     if incident["Factors"]["Armed"] not in list:
-      list[incident["Factors"]["Armed"])]=1
+      list[incident["Factors"]["Armed"]]=1
     elif:
       list[incident["Factors"]["Armed"]]+=1
    print(list)
