@@ -13,7 +13,7 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  print(get_arms(data)[knife])
+  print(get_arms(data)['knife'])
   return render_template('page1.html', numMentalIllness = count_individuals("Factors", "Mental-Illness", True, data), numWithoutMentalIllness = count_individuals("Factors", "Mental-Illness", False, data),
                          
                          numMale = count_individuals("Person", "Gender", "Male", data) , numFemale = count_individuals("Person", "Gender", "Female", data), numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data),
