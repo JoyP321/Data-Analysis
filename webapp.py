@@ -13,6 +13,7 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
+  get_Arms(data)
   return render_template('page1.html', numMentalIllness = count_individuals("Factors", "Mental-Illness", True, data), numWithoutMentalIllness = count_individuals("Factors", "Mental-Illness", False, data),
                          numKnife = count_individuals("Factors", "Armed", "knife", data), numGun= count_individuals("Factors", "Armed", "gun", data), numArmsUnknown= count_individuals("Factors", "Armed", "unknown", data), numUnarmed= count_individuals("Factors", "Armed", "unarmed", data),
                          numMale = count_individuals("Person", "Gender", "Male", data) , numFemale = count_individuals("Person", "Gender", "Female", data), numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data),
@@ -25,6 +26,14 @@ def count_individuals(category, specificCategory, target, data):
       toReturn +=1
   return toReturn
 
+def get_Arms(data):
+  list = {}
+  for incident in data:
+    if incident["Factors"]["Armed"] not in list:
+      list[incident["Factors"]["Armed"])]=1
+    elif:
+      list[incident["Factors"]["Armed"]]+=1
+   print(list)
   
 if __name__=="__main__":
     app.run(debug=False)
