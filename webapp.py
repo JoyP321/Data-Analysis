@@ -13,7 +13,7 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  print( numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data))
+  print( count_individuals("Person", "Gender", "Unknown", data))
   return render_template('page1.html', numMentalIllness = count_individuals("Factors", "Mental-Illness", True, data), numWithoutMentalIllness = count_individuals("Factors", "Mental-Illness", False, data),
                          numKnife = get_arms(data)['knife'] , numArmedOther = get_arms(data)['other'], numGun = get_arms(data)['gun'], numArmsUnknown = get_arms(data)['unknown'], numUnarmed = get_arms(data)['unarmed'], numToyWeapon = get_arms(data)['toy weapon'], numUndetermined = get_arms(data)['undetermined'] ,  numSword = get_arms(data)['sword'], numMachete = get_arms(data)['machete'],  numBoxCutter = get_arms(data)['box cutter'], numTaser= get_arms(data)['Taser'],  numUnknownWeapon = get_arms(data)['unknown weapon'], numGunAndKnife= get_arms(data)['gun and knife'], numAx = get_arms(data)['ax'], numBat= get_arms(data)['baseball bat'], numVehicle = get_arms(data)['vehicle'], 
                          numMale = count_individuals("Person", "Gender", "Male", data) , numFemale = count_individuals("Person", "Gender", "Female", data), numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data),
