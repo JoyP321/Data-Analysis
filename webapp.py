@@ -33,7 +33,7 @@ def get_Arms(data):
       list[incident["Factors"]["Armed"]]=1
     else:
       list[incident["Factors"]["Armed"]]+=1
-   print(list)
+  print(list)
   
 if __name__=="__main__":
     app.run(debug=False)
