@@ -43,6 +43,8 @@ def get_Arms(data):
       smallerList[weapon]=list[weapon]
   print(list)
   print(smallerList)
+  toReturn = {"Weapons": smallerList}
+  print(toReturn)
   
 if __name__=="__main__":
     app.run(debug=False)
