@@ -38,7 +38,7 @@ def get_state_data(data):
     if incident["Incident"]["Location"]["State"] not in states:
       states[incident["Incident"]["Location"]["State"]]=1
     else:
-      states[incident["Incident"]["Location"]["Armed"]]+=1
+      states[incident["Incident"]["Location"]["State"]]+=1
   print(states)
 
 def get_arms(data):
