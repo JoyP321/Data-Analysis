@@ -18,17 +18,16 @@
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
         dataPoints: [
-          { label: "White, non-Hispanic",  y: {{ numWhite }}  },
-          { label: "Black, non-Hispanic", y: {{ numBlack }}  },
-          { label: "Asian", y: {{ numAsian }}  },
-          { label: "Native American",  y: {{ numNA }}  },
-          { label: "Hispanic",  y: {{ numHispanic }}  },
-          { label: "Other",  y: {{ numOther }}  },
-          { label: "Unknown",  y: {{ numUnknown }}  }
+          { label: "White, non-Hispanic",  y: 2},
+          { label: "Black, non-Hispanic", y: 2 }
+
         ]
       }
       ]
     });
-  
+    chart1.render()
+  }
+  </script>
+  <div id="chartContainer1" style="width: 45%; height: 300px; display: inline-block;"></div>
   
 {% endblock %}
