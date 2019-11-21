@@ -39,7 +39,7 @@ def get_Arms(data):
     if list[weapon]<10:
       smallerList["other"] +=1
     else:
-      smallerlist[weapon]=list[weapon]
+      smallerList[weapon]=list[weapon]
   print(list)
   print(smallerList)
   
