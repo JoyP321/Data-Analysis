@@ -35,10 +35,10 @@ def count_individuals(category, specificCategory, target, data):
 def get_state_data(data):
   states = {}
   for incident in data:
-    if incident["Location"]["State"] not in states:
-      states[incident["Location"]["State"]]=1
+    if incident["Incident"]["Location"]["State"] not in states:
+      states[incident["Incident"]["Location"]["State"]]=1
     else:
-      states[incident["Factors"]["Armed"]]+=1
+      states[incident["Incident"]["Factors"]["Armed"]]+=1
   print(states)
 
 def get_arms(data):
