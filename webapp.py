@@ -19,6 +19,12 @@ def render_p1():
                          numMale = count_individuals("Person", "Gender", "Male", data) , numFemale = count_individuals("Person", "Gender", "Female", data), numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data),
                          numWhite = count_individuals("Person", "Race", "White", data), numBlack = count_individuals("Person", "Race", "African American", data), numAsian = count_individuals("Person", "Race", "Asian", data), numNA = count_individuals("Person", "Race", "Native American", data), numHispanic = count_individuals("Person", "Race", "Hispanic", data), numOther = count_individuals("Person", "Race", "Other", data), numUnknown = count_individuals("Person", "Race", "Unknown", data))
 
+@app.route("/p2")
+def render_p2():
+  with open('police_shootings (1).json') as shooting_data:
+    data = json.load(shooting_data)
+  return render_template('page2.html')
+
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
   for incident in data:
