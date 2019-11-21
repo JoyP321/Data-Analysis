@@ -13,9 +13,9 @@ def render_main():
 def render_p1():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  get_Arms(data)
+  print(get_arms[data][knife])
   return render_template('page1.html', numMentalIllness = count_individuals("Factors", "Mental-Illness", True, data), numWithoutMentalIllness = count_individuals("Factors", "Mental-Illness", False, data),
-                         numKnife = count_individuals("Factors", "Armed", "knife", data), numGun= count_individuals("Factors", "Armed", "gun", data), numArmsUnknown= count_individuals("Factors", "Armed", "unknown", data), numUnarmed= count_individuals("Factors", "Armed", "unarmed", data),
+                         numKnife = get_arms[data][knife] , numGun = , numArmsUnknown =, numUnarmed = , numToyWeapon =, numUndetermined = ,  numSword = , numMachete =,  numBoxCutter =, numTaser=,  numUnknownWeapon =, numGunAndKnife=, numAx =, numBat=, numVehicle =, 
                          numMale = count_individuals("Person", "Gender", "Male", data) , numFemale = count_individuals("Person", "Gender", "Female", data), numGenderUnknown = count_individuals("Person", "Gender", "Unknown", data),
                          numWhite = count_individuals("Person", "Race", "White", data), numBlack = count_individuals("Person", "Race", "African American", data), numAsian = count_individuals("Person", "Race", "Asian", data), numNA = count_individuals("Person", "Race", "Native American", data), numHispanic = count_individuals("Person", "Race", "Hispanic", data), numOther = count_individuals("Person", "Race", "Other", data), numUnknown = count_individuals("Person", "Race", "Unknown", data))
 
@@ -43,8 +43,7 @@ def get_Arms(data):
       smallerList[weapon]=list[weapon]
   print(list)
   print(smallerList)
-  toReturn = {"Weapons": smallerList}
-  print(toReturn)
+  return smallerList
   
 if __name__=="__main__":
     app.run(debug=False)
