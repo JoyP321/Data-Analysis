@@ -34,12 +34,12 @@ def get_Arms(data):
     else:
       list[incident["Factors"]["Armed"]]+=1
   smallerList ={}
-  smallerList["other"]=0
+  smallerList["weapons"]["other"]=0
   for weapon in list:
-    if list[weapon]<10:
-      smallerList["other"] +=1
+    if list["weapons"][weapon]<10:
+      smallerList["weapons"]["other"] +=1
     else:
-      smallerList[weapon]=list[weapon]
+      smallerList["weapons"][weapon]=list["weapons"][weapon]
   print(list)
   print(smallerList)
   
