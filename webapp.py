@@ -7,7 +7,6 @@ app = Flask(__name__)
 def render_main():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  get_states_data(data)
   return render_template('home.html')
 
 @app.route("/p1")
@@ -23,6 +22,7 @@ def render_p1():
 def render_p2():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
+  get_state_data(data)
   return render_template('page2.html')
 
 def count_individuals(category, specificCategory, target, data):
