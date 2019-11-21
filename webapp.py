@@ -41,8 +41,6 @@ def get_arms(data):
       smallerList["other"] +=1
     else:
       smallerList[weapon]=list[weapon]
-  print(list)
-  print(smallerList)
   return smallerList
   
 if __name__=="__main__":
