@@ -11,7 +11,7 @@
   window.onload = function () {
     var chart1 = new CanvasJS.Chart("chartContainer1", {
       title:{
-        text: "Victims by Race"              
+        text: "Victims by State"              
       },
       data: [              
       {
@@ -35,6 +35,6 @@
     chart1.render()
   }
   </script>
-  <div id="chartContainer1" style="width: 45%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer1" style="width: 100%"; height: 300px; display: inline-block;"></div>
   
 {% endblock %}
