@@ -36,10 +36,10 @@ def get_Arms(data):
   smallerList ={}
   smallerList["weapons"]["other"]=0
   for weapon in list:
-    if list["weapons"][weapon]<10:
+    if list[weapon]<10:
       smallerList["weapons"]["other"] +=1
     else:
-      smallerList["weapons"][weapon]=list["weapons"][weapon]
+      smallerList["weapons"][weapon]=list[weapon]
   print(list)
   print(smallerList)
   
