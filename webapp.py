@@ -42,7 +42,7 @@ def get_state_data(data):
   print(states)
   code =""
   for state in states:
-    code += "\n { y: " + states[state] +", label: \""+ state[state] +"\", indexLabel: \"" + state + "\" },"
+    code += "\n { y: " + str(states[state]) +", label: \""+ str(state[state]) +"\", indexLabel: \"" + state + "\" },"
   print(code)
         
 def get_arms(data):
