@@ -23,7 +23,7 @@ def render_p2():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
   get_state_data(data)
-  return render_template('page2.html')
+  return render_template('page2.html', dataCode = get_state_data(data))
 
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
