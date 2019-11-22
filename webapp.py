@@ -42,7 +42,7 @@ def get_state_data(data):
   print(states)
   code =""
   for state in states:
-    code += Markup("\n { y: " + states[state] +", label: \""+ str(states[state]) +"\", indexLabel: \"" + str(states[state]) + "\" },")
+    code += Markup("\n { y: " + state +", label: \""+ str(states[state]) +"\", indexLabel: \"" + str(states[state]) + "\" },")
   print(code)
   return code
         
