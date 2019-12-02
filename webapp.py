@@ -72,7 +72,7 @@ def get_arms(data):
 def get_shootings_by_month(data):
   dates = {}
   for event in data:
-    if event['Incident']['Date']] not in dates:
+    if event['Incident']['Date'] not in dates:
       dates[event['Incident']['Date']]=1
     else:
       dates[event['Incident']['Date']]+=1
