@@ -25,6 +25,12 @@ def render_p2():
   get_state_data(data)
   return render_template('page2.html', dataCode = get_state_data(data))
 
+@app.route("/p3")
+def render_p3():
+  with open('police_shootings (1).json') as shooting_data:
+    data = json.load(shooting_data)
+  return render_template('page3.html')
+
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
   for incident in data:
