@@ -43,7 +43,6 @@ def get_state_data(data):
   code =""
   for state in states:
     code += Markup("\n { label: \"" + state +"\", y: "+ str(states[state]) +"},")
-  print(code)
   return code
         
 def get_arms(data):
