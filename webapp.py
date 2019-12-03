@@ -79,7 +79,7 @@ def get_shootings_by_month(data):
     code =""
     for date in dates:
         code += Markup("\n { label: new Date("+ date[0:4] + "," + date[5:7] + "," + date[8:10]+ "), y: "+ str(dates[date]) +"},")
-    print(code)
+    print(dates)
     
   
 if __name__=="__main__":
