@@ -29,8 +29,7 @@ def render_p2():
 def render_p3():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  get_shootings_by_month(data)
-  return render_template('page3.html')
+  return render_template('page3.html', data = get_shootings_by_month(data))
 
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
@@ -79,7 +78,7 @@ def get_shootings_by_month(data):
     code =""
     for date in dates:
         code += Markup("\n { label: new Date("+ date[0:4] + "," + date[5:7] + "," + date[8:10]+ "), y: "+ str(dates[date]) +"},")
-    print(dates)
+    return code
     
   
 if __name__=="__main__":
