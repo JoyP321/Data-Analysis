@@ -72,10 +72,10 @@ def get_arms(data):
 def get_shootings_by_month(data):
   dates = {}
   for event in data:
-    if event['Incident']['Date']['Full'] not in dates:
-      dates[event['Incident']['Date']['Full']]=1
+    if event['Incident']['Date']['Full'][0:8] not in dates:
+      dates[event['Incident']['Date']['Full'][0:8]]=1
     else:
-      dates[event['Incident']['Date']['Full']]+=1
+      dates[event['Incident']['Date']['Full'][0:8]]+=1
     code =""
     for date in dates:
         code += Markup("\n { label: new Date("+ date[0:4] + "," + date[5:7] + "," + date[8:10]+ "), y: "+ str(dates[date]) +"},")
