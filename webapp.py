@@ -22,7 +22,6 @@ def render_p1():
 def render_p2():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
-  get_state_data(data)
   return render_template('page2.html', dataCode = get_state_data(data))
 
 @app.route("/p3")
@@ -45,7 +44,6 @@ def get_state_data(data):
       states[incident["Incident"]["Location"]["State"]]=1
     else:
       states[incident["Incident"]["Location"]["State"]]+=1
-  print(states)
   code =""
   for state in states:
     code += Markup("\n { label: \"" + state +"\", y: "+ str(states[state]) +"},")
