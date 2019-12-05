@@ -75,7 +75,7 @@ def get_shootings_by_month(data):
       dates[event['Incident']['Date']['Full'][0:8]]+=1
   code =""
   for date in dates:
-      code += Markup("\n { x: new Date("+ date[0:4] + "," + date[5:7] + "," + "01" + "), y: "+ str(dates[date]) +"},")
+      code += Markup("\n { x: new Date("+ date[0:4] + "," + date[5:7] + "), y: "+ str(dates[date]) +"},")
   return code
     
   
