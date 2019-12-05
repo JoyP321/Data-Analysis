@@ -51,6 +51,9 @@
       {
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
+	showInLegend: true,
+	legendText: "{label}",
+	indexLabel: "{label}: #percent%",
         dataPoints: [
           { label: "With Mental Illness",  y: {{ numMentalIllness }}  },
           { label: "Without Mental Illness", y: {{ numWithoutMentalIllness }}  }
@@ -69,6 +72,9 @@
       {
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
+	showInLegend: true,
+	legendText: "{label}",
+	indexLabel: "{label}: #percent%",
         dataPoints: [
           { label: "Male",  y: {{ numMale }}  },
           { label: "Female", y: {{ numFemale }}  },
@@ -88,6 +94,9 @@
       {
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
+	showInLegend: true,
+	legendText: "{label}",
+	indexLabel: "{label}: #percent%",
         dataPoints: [
           { label: "Had Gun",  y: {{ numGun }}  },
           { label: "Had Knife", y: {{ numKnife }}  },
@@ -117,10 +126,10 @@
 
   }
   </script>
-  <div id="chartContainer1" style="width: 49%; height: 300px; display: inline-block;"></div>
-  <div id="chartContainer2" style="width: 49%; height: 300px; display: inline-block;"></div>
-  <div id="chartContainer3" style="width: 49%; height: 300px; display: inline-block;"></div>
-  <div id="chartContainer4" style="width: 49%; height: 300px; display: inline-block;"></div>
+  <div id="chartContainer1" style="width: 49%; height: 500px; display: inline-block;"></div>
+  <div id="chartContainer2" style="width: 49%; height: 500px; display: inline-block;"></div>
+  <div id="chartContainer3" style="width: 49%; height: 500px; display: inline-block;"></div>
+  <div id="chartContainer4" style="width: 49%; height: 500px; display: inline-block;"></div>
   
   
 {% endblock %}
