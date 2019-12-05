@@ -25,6 +25,10 @@
       {
         // Change type to "doughnut", "line", "splineArea", etc.
         type: "doughnut",
+        innerRadius: "40%",
+		    showInLegend: true,
+		    legendText: "{label}",
+		    indexLabel: "{label}: #percent%",
         dataPoints: [
           { label: "White, non-Hispanic",  y: {{ numWhite }}  },
           { label: "Black, non-Hispanic", y: {{ numBlack }}  },
