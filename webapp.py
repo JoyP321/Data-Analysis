@@ -60,6 +60,7 @@ def get_state_data(data, counties):
     for s in states:
       if states[highest]< states[s]:
         highest=s
+        states[s] = 0
     code += Markup("\n { label: \"" + highest +"\", y: "+ str(states[highest]) +"},")
   return code
         
