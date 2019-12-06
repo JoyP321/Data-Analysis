@@ -53,7 +53,7 @@ def get_state_data(data, counties):
   
   for state in states:
     s = states[state]
-    states[state] = 10*s/get_state_population(counties, state)
+    states[state] = 100000*s/get_state_population(counties, state)
     
   for state in states:
     highest = state
