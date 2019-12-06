@@ -9,7 +9,7 @@ def render_main():
     data = json.load(shooting_data)
   with open('county_demographics.json') as county_data:
     counties = json.load(county_data)
-  get_state_population(counties, "CA")
+  print(str(get_state_population(counties, "CA")))
   return render_template('home.html')
 
 @app.route("/p1")
