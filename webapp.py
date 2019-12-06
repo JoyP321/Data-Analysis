@@ -51,7 +51,7 @@ def get_state_data(data, counties):
       states[incident["Incident"]["Location"]["State"]]+=1
   code =""
   for state in states:
-    code += Markup("\n { label: \"" + state +"\", y: "+ str(states[state]/get_state_population(counties, state)) +"},")
+    code += Markup("\n { label: \"" + state +"\", y: "+ str(10*states[state]/get_state_population(counties, state)) +"},")
   return code
         
 def get_arms(data):
