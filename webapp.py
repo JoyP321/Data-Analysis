@@ -50,8 +50,17 @@ def get_state_data(data, counties):
     else:
       states[incident["Incident"]["Location"]["State"]]+=1
   code =""
+  
   for state in states:
-    code += Markup("\n { label: \"" + state +"\", y: "+ str(10*states[state]/get_state_population(counties, state)) +"},")
+    s = states[state]
+    states[state] = 10*s/get_state_population(counties, state)
+    
+  for state in states:
+    highest = state
+    for s in states:
+      if states[highest]< states[s]
+      highest=s
+    code += Markup("\n { label: \"" + highest +"\", y: "+ str(states[highest]) +"},")
   return code
         
 def get_arms(data):
