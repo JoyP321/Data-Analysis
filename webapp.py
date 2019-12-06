@@ -7,6 +7,9 @@ app = Flask(__name__)
 def render_main():
   with open('police_shootings (1).json') as shooting_data:
     data = json.load(shooting_data)
+  with open('county_demographics.json') as county_data:
+    counties = json.load(county_data)
+  get_state_population(counties, "CA")
   return render_template('home.html')
 
 @app.route("/p1")
@@ -77,7 +80,13 @@ def get_shootings_by_month(data):
   for date in dates:
       code += Markup("\n { x: new Date("+ date[0:4] + "," + date[5:7] + "), y: "+ str(dates[date]) +"},")
   return code
-    
+
+def get_state_population(counties, state):
+  count=0
+  for county in counties:
+    if county['State'] == state:
+      count+=county['Population']['2010 Population']
+  return count
   
 if __name__=="__main__":
     app.run(debug=True)
