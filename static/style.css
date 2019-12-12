@@ -17,7 +17,8 @@ p{
 	margin-left: 35%;
 	margin-right: 35%;
 	border: 0px;
-	border-top: 4px solid mediumaquamarine;
+	border-top: 6px solid mediumaquamarine;
 	border-bottom: 2px solid rebeccapurple;
+	border-right: 2px solid rebeccapurple;
  }
 
