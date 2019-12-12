@@ -13,3 +13,10 @@ p{
 }
 
 
+ hr{
+	margin-left: 35%;
+	margin-right: 35%;
+	border: 0px;
+	border-top: 2px solid rgb(92,184,92);
+ }
+
