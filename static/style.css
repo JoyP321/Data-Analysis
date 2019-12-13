@@ -12,13 +12,15 @@ p{
   padding-bottom: 20px;
 }
 
+a{
+	color: mediumaquamarine;
+}
 
- hr{
+hr{
 	margin-left: 35%;
 	margin-right: 35%;
 	border: 0px;
 	border-radius: 4px;
 	border-top: 8px solid mediumaquamarine;
-	
- }
+}
 
