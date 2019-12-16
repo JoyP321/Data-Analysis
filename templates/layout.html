@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="plotly-latest.min.js"></script>
+    
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>{% block title %}{% endblock %} - My Webpage</title>
   </head>
   
@@ -28,10 +28,10 @@
           <li class="nav-item{% if active_page == "page2" %} active{% endif %}">
             <a class="nav-link" href="/p2">Locations</a>
           </li> 
-	  <li class="nav-item{% if active_page == "page3" %} active{% endif %}">
+	  	  <li class="nav-item{% if active_page == "page3" %} active{% endif %}">
             <a class="nav-link" href="/p3">Timeline</a>
           </li> 
-	  <li class="nav-item{% if active_page == "page4" %} active{% endif %}">
+	      <li class="nav-item{% if active_page == "page4" %} active{% endif %}">
             <a class="nav-link" href="/p4">map...?</a>
           </li> 
           </li> 
