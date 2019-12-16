@@ -35,12 +35,6 @@ def render_p3():
     data = json.load(shooting_data)
   return render_template('page3.html', dataCode = get_shootings_by_month(data))
 
-@app.route("/p4")
-def render_p4():
-  with open('police_shootings (1).json') as shooting_data:
-    data = json.load(shooting_data)
-  return render_template('page4.html')
-
 def count_individuals(category, specificCategory, target, data):
   toReturn = 0
   for incident in data:
